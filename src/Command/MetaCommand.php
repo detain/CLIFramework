@@ -101,7 +101,7 @@ function encode_array_as_shell_string($array)
     }
 }
 
-class MetaCommand extends Command
+class Meta extends Command
 {
     public function brief()
     {

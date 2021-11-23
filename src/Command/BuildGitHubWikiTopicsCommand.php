@@ -9,7 +9,7 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use Exception;
 
-class BuildGitHubWikiTopicsCommand extends Command
+class BuildGitHubWikiTopics extends Command
 {
     public function brief()
     {

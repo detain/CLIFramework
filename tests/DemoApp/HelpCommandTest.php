@@ -2,14 +2,14 @@
 namespace DemoApp;
 use CLIFramework\Testing\CommandTestCase;
 
-class HelpCommandTest extends CommandTestCase
+class HelpTest extends CommandTestCase
 {
 
     public static function setupApplication() {
         return new \DemoApp\Application;
     }
 
-    public function testHelpCommand() {
+    public function testHelp() {
         $this->expectOutputRegex("/A simple demo command/");
         $this->assertTrue( $this->runCommand('example/demo help') );
     }

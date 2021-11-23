@@ -12,7 +12,7 @@ namespace TestApp\Command\ListCommand;
 use CLIFramework\Command;
 
 /** Test process stage **/
-class FooCommand extends Command
+class Foo extends Command
 {
 
     function prepare()

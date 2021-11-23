@@ -5,9 +5,9 @@ use PHPUnit\Framework\TestCase;
 
 class TestAppCommandTest extends TestCase
 {
-    public function testSimpleCommand()
+    public function testSimple()
     {
-        $command = new TestApp\Command\SimpleCommand(new Application);
+        $command = new TestApp\Command\Simple(new Application);
         $command->init();
 
         $argInfos = $command->getArgInfoList();
@@ -16,8 +16,8 @@ class TestAppCommandTest extends TestCase
         $this->assertEquals('var', $argInfos[0]->name);
     }
 
-    public function testArginfoCommand() {
-        $cmd = new TestApp\Command\ArginfoCommand(new Application);
+    public function testArginfo() {
+        $cmd = new TestApp\Command\Arginfo(new Application);
         $cmd->init();
 
         $argInfos = $cmd->getArgInfoList();

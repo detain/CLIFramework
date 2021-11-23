@@ -47,8 +47,8 @@ class CommandAutoloader
         /*
          * Commands to be autoloaded must located at specific directory.
          * If parent is Application, commands must be whthin App/Command/ directory.
-         * If parent is another command named FooCommand, sub-commands must
-         *     within App/Command/FooCommand/ directory.
+         * If parent is another command named Foo, sub-commands must
+         *     within App/Command/Foo/ directory.
          */
         $commandDirectoryBase= $this->parent->isApplication()
             ? 'Command'

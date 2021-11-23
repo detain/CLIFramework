@@ -2,7 +2,7 @@
 namespace DemoApp\Command;
 use CLIFramework\Command;
 
-class AddCommand extends Command {
+class Add extends Command {
 
     public function brief() { return 'Add a file'; }
 

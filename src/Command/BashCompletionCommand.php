@@ -16,7 +16,7 @@ use CLIFramework\Command;
 use CLIFramework\CommandInterface;
 use CLIFramework\Completion\BashGenerator;
 
-class BashCompletionCommand extends Command implements CommandInterface
+class BashCompletion extends Command implements CommandInterface
 {
     public function brief()
     {

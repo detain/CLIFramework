@@ -47,7 +47,7 @@ Synopsis
 --------------------
 
 ```php
-class CommitCommand extends CLIFramework\Command {
+class Commit extends CLIFramework\Command {
 
     public function brief() { return 'brief of bar'; }
 
@@ -106,7 +106,7 @@ class CommitCommand extends CLIFramework\Command {
 
     public function init() {
 
-        $this->command('foo'); // register App\Command\FooCommand automatically
+        $this->command('foo'); // register App\Command\Foo automatically
 
         $this->command('bar', 'WhatEver\MyCommand\BarCommand');
 
@@ -115,7 +115,7 @@ class CommitCommand extends CLIFramework\Command {
         $this->commandGroup('Database Commands', ['create-db', 'drop-db']);
 
         $this->commandGroup('More Commands', [
-            'foo' => 'WhatEver\MyCommand\FooCommand',
+            'foo' => 'WhatEver\MyCommand\Foo',
             'bar' => 'WhatEver\MyCommand\BarCommand'
         ]);
     }

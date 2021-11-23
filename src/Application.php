@@ -30,13 +30,13 @@ use Pimple\Container;
 use CLIFramework\ExceptionPrinter\ProductionExceptionPrinter;
 use CLIFramework\ExceptionPrinter\DevelopmentExceptionPrinter;
 
-use CLIFramework\Command\HelpCommand;
-use CLIFramework\Command\ZshCompletionCommand;
-use CLIFramework\Command\BashCompletionCommand;
-use CLIFramework\Command\MetaCommand;
-use CLIFramework\Command\CompileCommand;
-use CLIFramework\Command\ArchiveCommand;
-use CLIFramework\Command\BuildGitHubWikiTopicsCommand;
+use CLIFramework\Command\Help;
+use CLIFramework\Command\ZshCompletion;
+use CLIFramework\Command\BashCompletion;
+use CLIFramework\Command\Meta;
+use CLIFramework\Command\Compile;
+use CLIFramework\Command\Archive;
+use CLIFramework\Command\BuildGitHubWikiTopics;
 
 use Exception;
 use ReflectionClass;
@@ -266,14 +266,14 @@ class Application extends CommandBase implements CommandInterface
     {
         // $this->addCommand('list','CLIFramework\\Command\\ListCommand');
         parent::init();
-        $this->command('help', HelpCommand::class);
+        $this->command('help', Help::class);
         $this->commandGroup("Development Commands", array(
-            'zsh'                 => ZshCompletionCommand::class,
-            'bash'                => BashCompletionCommand::class,
-            'meta'                => MetaCommand::class,
-            'compile'             => CompileCommand::class,
-            'archive'             => ArchiveCommand::class,
-            'github:build-topics' => BuildGitHubWikiTopicsCommand::class,
+            'zsh'                 => ZshCompletion::class,
+            'bash'                => BashCompletion::class,
+            'meta'                => Meta::class,
+            'compile'             => Compile::class,
+            'archive'             => Archive::class,
+            'github:build-topics' => BuildGitHubWikiTopics::class,
         ))->setId('dev');
     }
 

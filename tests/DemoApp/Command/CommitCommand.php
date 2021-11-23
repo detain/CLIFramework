@@ -2,7 +2,7 @@
 namespace DemoApp\Command;
 use CLIFramework\ValueCollection;
 
-class CommitCommand extends \CLIFramework\Command {
+class Commit extends \CLIFramework\Command {
 
     public function brief() { return 'A simple demo command'; }
 

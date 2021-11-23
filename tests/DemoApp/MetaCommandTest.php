@@ -5,7 +5,7 @@ use CLIFramework\Exception\CommandNotFoundException;
 use CLIFramework\Testing\CommandTestCase;
 use CLIFramework\ServiceContainer;
 
-class MetaCommandTest extends CommandTestCase
+class MetaTest extends CommandTestCase
 {
 
     public static function setupApplication()

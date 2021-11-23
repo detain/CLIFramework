@@ -24,11 +24,11 @@ $loader = require 'vendor/autoload.php';
 $loader->add('DemoApp','tests');
 
 require 'tests/DemoApp/Application.php';
-require 'tests/DemoApp/Command/CommitCommand.php';
-require 'tests/DemoApp/Command/FooCommand.php';
-require 'tests/DemoApp/Command/AddCommand.php';
-require 'tests/DemoApp/Command/FooCommand/SubFooCommand.php';
-require 'tests/DemoApp/Command/ServerCommand.php';
+require 'tests/DemoApp/Command/Commit.php';
+require 'tests/DemoApp/Command/Foo.php';
+require 'tests/DemoApp/Command/Add.php';
+require 'tests/DemoApp/Command/Foo/SubFoo.php';
+require 'tests/DemoApp/Command/Server.php';
 
 $app = new DemoApp\Application;
 

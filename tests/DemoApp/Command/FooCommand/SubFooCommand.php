@@ -1,7 +1,7 @@
 <?php
-namespace DemoApp\Command\FooCommand;
+namespace DemoApp\Command\Foo;
 
-class SubFooCommand extends \CLIFramework\Command {
+class SubFoo extends \CLIFramework\Command {
 
     public function brief() { return 'brief of subfoo'; }
 

@@ -17,7 +17,7 @@ use CLIFramework\CommandInterface;
 use CLIFramework\OptionPrinter;
 use CLIFramework\Corrector;
 
-class HelpCommand extends Command implements CommandInterface
+class Help extends Command implements CommandInterface
 {
     /**
      * one line description.

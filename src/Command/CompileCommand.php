@@ -18,7 +18,7 @@ use Phar;
  * {{Halt Compiler}}
  * {{Content Section}}
  */
-class CompileCommand extends Command
+class Compile extends Command
 {
     public function options($opts)
     {

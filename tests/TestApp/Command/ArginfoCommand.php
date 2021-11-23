@@ -3,7 +3,7 @@ namespace TestApp\Command;
 use CLIFramework\Command;
 use Exception;
 
-class ArginfoCommand extends Command
+class Arginfo extends Command
 {
 
     public function arguments($args) {

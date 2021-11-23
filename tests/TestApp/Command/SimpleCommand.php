@@ -3,7 +3,7 @@ namespace TestApp\Command;
 use CLIFramework\Command;
 use Exception;
 
-class SimpleCommand extends Command
+class Simple extends Command
 {
 
     public function help()

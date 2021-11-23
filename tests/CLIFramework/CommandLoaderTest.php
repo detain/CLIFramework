@@ -15,7 +15,7 @@ class CommandLoaderTest extends TestCase
 {
     public function test()
     {
-        $command = new TestApp\Command\SimpleCommand(new TestApp\Application);
+        $command = new TestApp\Command\Simple(new TestApp\Application);
         $text = $command->getFormattedHelpText();
 
         // tODO: use string format assertion API to verify this

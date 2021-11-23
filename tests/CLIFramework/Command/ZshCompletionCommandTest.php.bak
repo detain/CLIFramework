@@ -1,6 +1,6 @@
 <?php
 
-class CommitCommand extends CLIFramework\Command {
+class Commit extends CLIFramework\Command {
 
     public function brief() { return 'brief of bar'; }
 
@@ -48,12 +48,12 @@ class CommitCommand extends CLIFramework\Command {
         $this->getLogger()->notice('executing bar command.');
     }
 }
-class FooCommand extends CLIFramework\Command { 
+class Foo extends CLIFramework\Command { 
 
     public function brief() { return 'brief of foo'; }
 
     public function init() {
-        $this->addCommand('subfoo','SubFooCommand');
+        $this->addCommand('subfoo','SubFoo');
     }
 
     public function execute() {
@@ -61,7 +61,7 @@ class FooCommand extends CLIFramework\Command {
     }
 }
 
-class SubFooCommand extends CLIFramework\Command {
+class SubFoo extends CLIFramework\Command {
 
     public function brief() { return 'brief of subfoo'; }
 
@@ -86,13 +86,13 @@ class ExampleApplication extends CLIFramework\Application {
     public function init()
     {
         parent::init();
-        $this->command('foo','FooCommand');
-        $this->command('commit','CommitCommand');
+        $this->command('foo','Foo');
+        $this->command('commit','Commit');
     }
 }
 
 
-class ZshCompletionCommandTest extends TestCase
+class ZshCompletionTest extends TestCase
 {
 
     public function test()

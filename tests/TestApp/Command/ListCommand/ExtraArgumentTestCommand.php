@@ -2,7 +2,7 @@
 namespace TestApp\Command\ListCommand;
 use Exception;
 
-class ExtraArgumentTestCommand extends \CLIFramework\Command
+class ExtraArgumentTest extends \CLIFramework\Command
 {
 
     function options($opts)

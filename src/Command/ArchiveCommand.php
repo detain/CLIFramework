@@ -35,7 +35,7 @@ use Universal\ClassLoader\MapClassLoader;
  *
  *    php example/demo --debug archive
  */
-class ArchiveCommand extends Command
+class Archive extends Command
 {
     public function brief()
     {

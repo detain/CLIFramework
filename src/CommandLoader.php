@@ -51,7 +51,7 @@ class CommandLoader
      *
      * This method is inverse of self::translate()
      *
-     *     HelpCommand => help
+     *     Help => help
      *     SuchALongCommand => such-a-long
      *
      * @param string $className class name.

@@ -5,7 +5,7 @@ use CLIFramework\Command;
 use CLIFramework\Extension\DaemonExtension;
 use RuntimeException;
 
-class ServerCommand extends Command
+class Server extends Command
 {
 
     public function brief()
