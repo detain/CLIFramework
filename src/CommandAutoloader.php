@@ -83,7 +83,7 @@ class CommandAutoloader
     {
         $extensions = explode(',', spl_autoload_extensions());
         $isCommandClassFile = ($fileName[0] !== '.'
-            and preg_match('/(^.*Command)(\..*)$/', $fileName, $matches) === 1
+            and preg_match('/(^.*)(\..*)$/', $fileName, $matches) === 1
             and in_array($matches[2], $extensions));
         return $isCommandClassFile
             ? $this->parent->getLoader()->inverseTranslate($matches[1])

@@ -13,6 +13,7 @@ use Exception;
 use CLIFramework\CommandInterface;
 use CLIFramework\Exception\CommandClassNotFoundException;
 use CLIFramework\Application;
+use CLIFramework\Utils;
 
 /**
  * abstract command class
@@ -86,7 +87,10 @@ abstract class Command extends CommandBase implements CommandInterface
         // strip command suffix
         $parts = explode('\\', $class);
         $class = end($parts);
+        // detect classes that would use a reserved keyword and strip the Command suffix
+        if (preg_match('/^('.implode('|', Utils::getKeywords()).')command$/', strtolower($class))) {
         $class = preg_replace('/Command$/', '', $class);
+        }
         return strtolower(preg_replace('/(?<=[a-z])([A-Z])/', '-\1', $class));
     }
 

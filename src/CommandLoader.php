@@ -11,6 +11,7 @@
 namespace CLIFramework;
 
 use CLIFramework\Exception\CommandClassNotFoundException;
+use CLIFramework\Utils;
 use Exception;
 
 class CommandLoader
@@ -43,7 +44,12 @@ class CommandLoader
         foreach ($args as & $a) {
             $a = ucfirst($a);
         }
-        return join('', $args) . 'Command';
+        $className = join('', $args);
+        // detect commands that would use a reserved keyword and add the Command suffix
+        if (in_array(strtolower($className), Utils::getKeywords())) {
+			$className .= 'Command';
+        }
+        return $className;
     }
 
     /**
@@ -59,11 +65,12 @@ class CommandLoader
      */
     public function inverseTranslate($className)
     {
-        if (substr($className, -7) !== 'Command') {
-            throw new \InvalidArgumentException("Command class name need to end with 'Command'");
+        // lower case the first letter
+        $className = lcfirst($className);
+        if (in_array(substr($className, 0, -7), Utils::getKeywords())) {
+        	// remove the suffix 'Command'
+			$className = substr($className, 0, -7);
         }
-        // remove the suffix 'Command', then lower case the first letter
-        $className = lcfirst(substr($className, 0, -7));
         return preg_replace_callback(
             '/[A-Z]/',
             function ($matches) {

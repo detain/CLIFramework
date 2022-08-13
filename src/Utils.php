@@ -14,6 +14,9 @@ use ReflectionClass;
 
 class Utils
 {
+	public static function getKeywords() {
+		return ['abstract', 'and', 'array', 'as', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'for', 'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include', 'instanceof', 'insteadof', 'interface', 'isset', 'list', 'namespace', 'new', 'or', 'print', 'private', 'protected', 'public', 'require', 'return', 'static', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'while', 'xor'];
+	}
 
     /**
      * translate command name to class name
@@ -23,11 +26,14 @@ class Utils
      * */
     public static function translateCommandClassName($command)
     {
+        if (in_array($command, self::getKeywords())) {
+			$command .= 'Command';
+        }
         $args = explode('-', $command);
         foreach ($args as & $a) {
             $a = ucfirst($a);
         }
-        $subclass = join('', $args) . 'Command';
+        $subclass = join('', $args);
 
         return $subclass;
     }
