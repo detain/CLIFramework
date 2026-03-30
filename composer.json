@@ -33,5 +33,10 @@
             "CLIFramework\\": "src/"
         }
     },
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        }
+    },
     "extra": { "branch-alias": { "dev-master": "4.1.x-dev" } }
 }

@@ -81,6 +81,16 @@ class Application extends CommandBase implements CommandInterface
     public $logger;
 
 
+    /**
+     * Command loader service.
+     *
+     * Declared explicitly to avoid dynamic property creation warnings on PHP 8.2+.
+     *
+     * @var CLIFramework\CommandLoader
+     */
+    public $loader;
+
+
     public $programName;
 
 
