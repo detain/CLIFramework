@@ -8,7 +8,18 @@
         "completion",
         "zsh",
         "framework",
-        "getopt"
+        "getopt",
+        "cli",
+        "cli-framework",
+        "console",
+        "terminal",
+        "terminal-app",
+        "terminal-ui",
+        "tui",
+        "progress-bar",
+        "ansi",
+        "php",
+        "php-library"
     ],
     "require": {
         "php": ">=7.2.0",
